@@ -4,7 +4,6 @@ angular.module('e2eApp')
     .factory('Tracker', function ($rootScope, API_URL) {
         var stompClient = null;
         function sendActivity() {
-            console.log('tracker.service.js: sendActivity() API_URL ' + API_URL)
             stompClient
                 .send(API_URL + '/websocket/activity',
                 {},
@@ -13,7 +12,6 @@ angular.module('e2eApp')
         }
         return {
             connect: function () {
-                console.log('tracker.service.js: connect(): API_URL ' + API_URL)
                 var socket = new SockJS(API_URL + '/websocket/activity');
                 stompClient = Stomp.over(socket);
                 stompClient.connect({}, function(frame) {
