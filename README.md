@@ -27,7 +27,7 @@ Install and configure mysql.
 
 Terminal Tab #1: BACKEND
 =========================
-cd backend
+cd backend &&
 mvn spring-boot:run
 
 ...
@@ -40,7 +40,7 @@ mvn spring-boot:run
 
 Terminal Tab #2: FRONTEND
 ==========================
-cd frontend/src/main/webapp
+cd frontend/src/main/webapp &&
 sudo npm install -g http-server && http-server
 
 Starting up http-server, serving ./ on: http://0.0.0.0:8081
@@ -51,7 +51,7 @@ Hit CTRL-C to stop the server
 Terminal Tab #3: GRUNT
 ========================
 
-cd frontend
+cd frontend &&
 bower install && npm install && grunt serve
 
 ...
